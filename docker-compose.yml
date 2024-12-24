@@ -70,7 +70,7 @@ services:
     ports:
       - ${RUST_RCON_INTERFACE:-127.0.0.1}:28016:28016
       - 0.0.0.0:28015:28015/udp
-      - 0.0.0.0:8000:8000/tcp
+      - 0.0.0.0:8801:8000/tcp
     healthcheck:
       test: ["CMD", "pgrep", "RustDedicated"]
       interval: 10s
