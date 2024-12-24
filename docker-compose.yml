@@ -60,13 +60,13 @@ services:
         #su - linuxgsm -c "LINUX_GSM_VERSION=\"${LINUX_GSM_VERSION:-v20.4.1}\" /utils/custom-rust-server.sh"
     volumes:
       - lgsm:/home/linuxgsm
-      - ./mod-configs:/home/linuxgsm/serverfiles/oxide/config:rw
-      - ./custom-mods:/custom-plugins:ro
-      - ./custom-maps:/custom-maps:rw
+      - ./mod-configs:/home/linuxgsm/serverfiles/oxide/config
+      - ./custom-mods:/custom-plugins
+      - ./custom-maps:/custom-maps
       - ./harmony-mods:/home/linuxgsm/serverfiles/HarmonyMods
       - ./harmony-config:/home/linuxgsm/serverfiles/HarmonyConfig
-      - ./utils:/utils:ro
-      - ./rust-environment.sh:/rust-environment.sh:ro
+      - ./utils:/utils
+      - ./rust-environment.sh:/rust-environment.sh
     ports:
       - ${RUST_RCON_INTERFACE:-127.0.0.1}:28016:28016
       - 0.0.0.0:28015:28015/udp
