@@ -1,0 +1,3 @@
+# example mod-configs/plugins.txt
+# code comments are supported along with blank lines
+Whitelist
