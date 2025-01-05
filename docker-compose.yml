@@ -71,10 +71,10 @@ services:
       - ${RUST_RCON_INTERFACE:-127.0.0.1}:28016:28016
       - 0.0.0.0:28015:28015/udp
       - 0.0.0.0:8801:8000/tcp
-    # healthcheck:
-    #   test: ["CMD", "pgrep", "RustDedicated"]
-    #   interval: 10s
-    #   retries: 3
-    #   start_period: 15m
+    healthcheck:
+      test: ["CMD", "pgrep", "RustDedicated"]
+      interval: 10s
+      retries: 3
+      start_period: 15m
 #    devices:
 #      - /dev/dri:/dev/dri
